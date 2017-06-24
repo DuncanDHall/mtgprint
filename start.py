@@ -4,7 +4,7 @@
 
 # only rares:
 # http://magiccards.info/query?q=r%3Arare+e%3Abe%2Fen&v=card&s=cname
-
+import csv
 import re
 import urllib.request
 
@@ -24,5 +24,9 @@ card_titles = re.findall(card_title_pattern, html)
 collection = zip(card_titles, card_image_links)
 
 # store that collection
+writer = csv.writer(open("beta_cards.csv", "w"))
+head = ("Title", "Image URL")
+writer.writerow(head)
 for entry in collection:
+    writer.writerow(entry)
     print(entry)
