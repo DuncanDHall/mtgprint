@@ -100,8 +100,9 @@ for b in range(num_packs):
 
     for i, sheet in enumerate(sheets):
         path = dir + "b{}s{}.jpg".format(b, i)
-        print(path)
         sheet.save(path)
+
+    print("Booster #{} complete\n".format(b))
 
 
 print("done")
