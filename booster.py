@@ -55,8 +55,8 @@ for b in range(num_packs):
         booster.append(random.choice(rares))
     for i in range(3):  # three uncommons
         booster.append(random.choice(uncommons))
-    # for i in range(11):  # eleven commons
-    #     booster.append(random.choice(commons))
+    for i in range(11):  # eleven commons
+        booster.append(random.choice(commons))
 
     # Fetch card images
     print("Fetching card images...")
