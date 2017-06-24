@@ -16,11 +16,11 @@ beta_rares_url = "http://magiccards.info/query?q=r%3Arare+e%3Abe%2Fen&v=card&s=c
 beta_uncommons_url = "http://magiccards.info/query?q=r%3Auncommon+e%3Abe%2Fen&v=card&s=cname"
 beta_commons_url = "http://magiccards.info/query?q=r%3Acommon+e%3Abe%2Fen&v=card&s=cname"
 first_page_urls = [beta_rares_url, beta_uncommons_url, beta_commons_url]
-query_labels = ["beta rare", "beta uncommon", "beta common"]
-queries = zip(query_labels, first_page_urls)
+query_rarity = ["beta rare", "beta uncommon", "beta common"]
+queries = zip(query_rarity, first_page_urls)
 
 # re patterns
-card_image_url_pattern = re.compile('<img src="http://magiccards.info/scans/en/be/\d+.jpg"')
+card_image_url_pattern = re.compile('<img src="(http://magiccards.info/scans/en/be/\d+.jpg)"')
 card_title_pattern = re.compile('<a href="/be/en/\d+\.html">(.*)</a>')
 
 # iterate through queries extracting card names and image links
