@@ -11,6 +11,15 @@ import random
 import sys
 
 
+# the source for the image urls
+card_list_file = "amonkhet_cards.csv"
+
+# rarity distribution
+mythic_probability = 0.1
+num_rares = 1
+num_uncommons = 3
+num_commons = 10
+
 # Unpack args or prompt for them
 if len(sys.argv) == 3:
     num_packs = sys.argv[1]
@@ -23,7 +32,7 @@ else:
 # Load csv card collection
 print("Loading cards...")
 collection = []
-with open("beta_cards.csv") as csv_file:
+with open(card_list_file) as csv_file:
     for row in csv.reader(csv_file):
         collection.append(row)
 
