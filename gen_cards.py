@@ -12,7 +12,7 @@ import sys
 
 
 # the source for the image urls
-card_list_file = "amonkhet_cards.csv"
+card_list_file = "hour_of_devestation_cards.csv"
 
 # prompt for number of rares/mythics, uncommons, and commons, or number of packs
 packs_or_cards = input("Would you like to generate packs or a custom distribution of rarities? (p/c) ")
